@@ -17,11 +17,11 @@ def run_game():
     
 
     #设置背景色
-    bg_color =(230,230,230)
+    bg_color =(230, 230, 230)
 
 
     #创建一艘飞船,一个子弹编组和一个外星人编组
-    ship = Ship(ai_settings,screen)
+    ship = Ship(ai_settings, screen)
     bullets = Group()
     aliens = Group()
 
@@ -35,12 +35,12 @@ def run_game():
 
 
         #监视键盘和鼠标事件
-        gf.check_events(ai_settings,screen,ship,bullets)
+        gf.check_events(ai_settings, screen, ship, bullets)
         ship.update()
-        gf.update_bullets(bullets)
-        gf.update_aliens(ai_settings,aliens)
+        gf.update_bullets(aliens, bullets)
+        gf.update_aliens(ai_settings, aliens)
         #每次循环都重绘屏幕
-        gf.update_screen(ai_settings,screen,ship,aliens,bullets)
+        gf.update_screen(ai_settings, screen, ship, aliens, bullets)
         
         
 
